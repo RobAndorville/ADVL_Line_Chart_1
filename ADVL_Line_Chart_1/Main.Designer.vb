@@ -258,8 +258,6 @@ Partial Class Main
         Me.txtProNetName = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.btnOpenAppDir = New System.Windows.Forms.Button()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label17 = New System.Windows.Forms.Label()
         Me.btnOpenSystem = New System.Windows.Forms.Button()
         Me.btnOpenData = New System.Windows.Forms.Button()
         Me.btnOpenSettings = New System.Windows.Forms.Button()
@@ -301,6 +299,9 @@ Partial Class Main
         Me.FontDialog1 = New System.Windows.Forms.FontDialog()
         Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
         Me.btnAndorville = New System.Windows.Forms.Button()
+        Me.btnOpenParentDir = New System.Windows.Forms.Button()
+        Me.btnOpenArchive = New System.Windows.Forms.Button()
+        Me.btnCreateArchive = New System.Windows.Forms.Button()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage3.SuspendLayout()
@@ -2558,6 +2559,9 @@ Partial Class Main
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.btnOpenParentDir)
+        Me.TabPage2.Controls.Add(Me.btnOpenArchive)
+        Me.TabPage2.Controls.Add(Me.btnCreateArchive)
         Me.TabPage2.Controls.Add(Me.btnShowProjectInfo)
         Me.TabPage2.Controls.Add(Me.chkConnect)
         Me.TabPage2.Controls.Add(Me.btnOpenProject)
@@ -2566,8 +2570,6 @@ Partial Class Main
         Me.TabPage2.Controls.Add(Me.txtProNetName)
         Me.TabPage2.Controls.Add(Me.Label9)
         Me.TabPage2.Controls.Add(Me.btnOpenAppDir)
-        Me.TabPage2.Controls.Add(Me.Label7)
-        Me.TabPage2.Controls.Add(Me.Label17)
         Me.TabPage2.Controls.Add(Me.btnOpenSystem)
         Me.TabPage2.Controls.Add(Me.btnOpenData)
         Me.TabPage2.Controls.Add(Me.btnOpenSettings)
@@ -2681,24 +2683,6 @@ Partial Class Main
         Me.btnOpenAppDir.Text = "Open Application Directory"
         Me.btnOpenAppDir.UseVisualStyleBackColor = True
         '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(571, 373)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(41, 13)
-        Me.Label7.TabIndex = 296
-        Me.Label7.Text = "d:h:m:s"
-        '
-        'Label17
-        '
-        Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(374, 373)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(41, 13)
-        Me.Label17.TabIndex = 295
-        Me.Label17.Text = "d:h:m:s"
-        '
         'btnOpenSystem
         '
         Me.btnOpenSystem.Location = New System.Drawing.Point(84, 335)
@@ -2792,7 +2776,7 @@ Partial Class Main
         '
         Me.txtCurrentDuration.Location = New System.Drawing.Point(480, 368)
         Me.txtCurrentDuration.Name = "txtCurrentDuration"
-        Me.txtCurrentDuration.Size = New System.Drawing.Size(85, 20)
+        Me.txtCurrentDuration.Size = New System.Drawing.Size(120, 20)
         Me.txtCurrentDuration.TabIndex = 71
         '
         'Label12
@@ -2808,7 +2792,7 @@ Partial Class Main
         '
         Me.txtTotalDuration.Location = New System.Drawing.Point(283, 370)
         Me.txtTotalDuration.Name = "txtTotalDuration"
-        Me.txtTotalDuration.Size = New System.Drawing.Size(85, 20)
+        Me.txtTotalDuration.Size = New System.Drawing.Size(120, 20)
         Me.txtTotalDuration.TabIndex = 68
         '
         'Label2
@@ -3026,6 +3010,36 @@ Partial Class Main
         Me.btnAndorville.TabIndex = 285
         Me.btnAndorville.UseVisualStyleBackColor = True
         '
+        'btnOpenParentDir
+        '
+        Me.btnOpenParentDir.Location = New System.Drawing.Point(125, 396)
+        Me.btnOpenParentDir.Name = "btnOpenParentDir"
+        Me.btnOpenParentDir.Size = New System.Drawing.Size(125, 22)
+        Me.btnOpenParentDir.TabIndex = 310
+        Me.btnOpenParentDir.Text = "Open Parent Directory"
+        Me.ToolTip1.SetToolTip(Me.btnOpenParentDir, "Open the Parent directory")
+        Me.btnOpenParentDir.UseVisualStyleBackColor = True
+        '
+        'btnOpenArchive
+        '
+        Me.btnOpenArchive.Location = New System.Drawing.Point(354, 396)
+        Me.btnOpenArchive.Name = "btnOpenArchive"
+        Me.btnOpenArchive.Size = New System.Drawing.Size(94, 22)
+        Me.btnOpenArchive.TabIndex = 309
+        Me.btnOpenArchive.Text = "Open Archive"
+        Me.ToolTip1.SetToolTip(Me.btnOpenArchive, "Open a project archive file")
+        Me.btnOpenArchive.UseVisualStyleBackColor = True
+        '
+        'btnCreateArchive
+        '
+        Me.btnCreateArchive.Location = New System.Drawing.Point(256, 396)
+        Me.btnCreateArchive.Name = "btnCreateArchive"
+        Me.btnCreateArchive.Size = New System.Drawing.Size(92, 22)
+        Me.btnCreateArchive.TabIndex = 308
+        Me.btnCreateArchive.Text = "Create Archive"
+        Me.ToolTip1.SetToolTip(Me.btnCreateArchive, "Create a project archive file")
+        Me.btnCreateArchive.UseVisualStyleBackColor = True
+        '
         'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -3098,8 +3112,6 @@ Partial Class Main
     Friend WithEvents txtProNetName As TextBox
     Friend WithEvents Label9 As Label
     Friend WithEvents btnOpenAppDir As Button
-    Friend WithEvents Label7 As Label
-    Friend WithEvents Label17 As Label
     Friend WithEvents btnOpenSystem As Button
     Friend WithEvents btnOpenData As Button
     Friend WithEvents btnOpenSettings As Button
@@ -3357,4 +3369,7 @@ Partial Class Main
     Friend WithEvents btnMarkerProps2 As Button
     Friend WithEvents btnZoomChart As Button
     Friend WithEvents btnApplyInputDataSettings As Button
+    Friend WithEvents btnOpenParentDir As Button
+    Friend WithEvents btnOpenArchive As Button
+    Friend WithEvents btnCreateArchive As Button
 End Class

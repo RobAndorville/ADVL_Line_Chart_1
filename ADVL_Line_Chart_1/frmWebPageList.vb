@@ -332,6 +332,7 @@
 
         Else
             If Main.Project.DataFileExists(FileName) Then
+                Main.WorkflowFileName = FileName
                 Dim rtbData As New IO.MemoryStream
                 Main.Project.ReadData(FileName, rtbData)
                 rtbData.Position = 0
